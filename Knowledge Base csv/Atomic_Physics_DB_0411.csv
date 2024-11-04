@@ -66,3 +66,36 @@ Rb85,NuclearMagneticMoment,1.353
 0.29,Unit,None
 0.30,Unit,None
 1.353,Unit,μN
+Helium,AtomicMass,4.0026
+Helium,FirstIonizationEnergy,24.587
+Hydrogen,AtomicMass,1.0079
+Hydrogen,FirstIonizationEnergy,13.598
+Carbon,AtomicMass,12.011
+Carbon,FirstIonizationEnergy,11.260
+Neon,AtomicMass,20.1797
+Neon,FirstIonizationEnergy,21.564
+Photon,Type,Particle
+Photon,Charge,0
+Photon,Spin,1
+Electron,Type,Particle
+Electron,Charge,-1
+Electron,Spin,1/2
+Proton,Type,Particle
+Proton,Charge,+1
+Proton,Spin,1/2
+IonizationEnergy,Definition,"The energy required to remove an electron from an atom in its gaseous state."
+AtomicMass,Definition,"The mass of an atom, primarily determined by the number of protons and neutrons."
+TransitionProbability,Definition,"The probability of an atom transitioning from one energy level to another under specific conditions."
+PhotonEnergy,Formula,"E = hν"
+Electron,Mass,9.10938356e-31
+Proton,Mass,1.6726219e-27
+4.0026,Unit,amu
+1.0079,Unit,amu
+12.011,Unit,amu
+20.1797,Unit,amu
+24.587,Unit,eV
+13.598,Unit,eV
+11.260,Unit,eV
+21.564,Unit,eV
+9.10938356e-31,Unit,kg
+1.6726219e-27,Unit,kg
