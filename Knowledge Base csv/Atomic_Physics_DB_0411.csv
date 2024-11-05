@@ -99,3 +99,127 @@ Proton,Mass,1.6726219e-27
 21.564,Unit,eV
 9.10938356e-31,Unit,kg
 1.6726219e-27,Unit,kg
+Lithium,AtomicMass,6.941
+Lithium,FirstIonizationEnergy,5.392
+Sodium,AtomicMass,22.9897
+Sodium,FirstIonizationEnergy,5.139
+Magnesium,AtomicMass,24.305
+Magnesium,FirstIonizationEnergy,7.646
+Calcium,AtomicMass,40.078
+Calcium,FirstIonizationEnergy,6.113
+BindingEnergy,Definition,"The energy required to disassemble a nucleus into its component protons and neutrons."
+FineStructure,Definition,"The splitting of atomic energy levels due to relativistic corrections, such as spin-orbit interaction."
+HyperfineStructure,Definition,"The splitting of atomic energy levels due to interactions between nuclear spin and the magnetic field of electrons."
+AtomicRadius,Definition,"The average distance from the nucleus to the outermost electrons of an atom."
+AtomicRadius,Unit,pm
+EnergyLevel,Definition,"A quantized state of an atom or nucleus with a specific energy value."
+Neutron,Type,Particle
+Neutron,Charge,0
+Neutron,Spin,1/2
+Neutron,Mass,1.674927498e-27
+h,Type,Constant
+h,Value,6.62607015e-34
+c,Type,Constant
+c,Value,2.998e8
+μB,Type,MagneticMoment
+μB,Symbol,μB
+μB,BaseUnit,joules per tesla
+pm,Type,Length
+pm,Symbol,pm
+pm,BaseUnit,meters
+6.941,Unit,amu
+22.9897,Unit,amu
+24.305,Unit,amu
+40.078,Unit,amu
+5.392,Unit,eV
+5.139,Unit,eV
+7.646,Unit,eV
+6.113,Unit,eV
+1.674927498e-27,Unit,kg
+6.62607015e-34,Unit,J⋅s
+2.998e8,Unit,m/s
+Electron,SpinQuantumNumber,1/2
+Electron,MagneticQuantumNumber,±1/2
+Proton,SpinQuantumNumber,1/2
+Proton,MagneticQuantumNumber,±1/2
+Neutron,SpinQuantumNumber,1/2
+Neutron,MagneticQuantumNumber,±1/2
+Photon,SpinQuantumNumber,1
+Photon,MagneticQuantumNumber,0,±1
+Helium,SpinQuantumNumber,0
+Carbon,SpinQuantumNumber,0
+Lithium,SpinQuantumNumber,1/2
+Sodium,SpinQuantumNumber,3/2
+Magnesium,SpinQuantumNumber,0
+Calcium,SpinQuantumNumber,0
+SpinQuantumNumber,Definition,"A quantum number that describes the intrinsic angular momentum of a particle."
+MagneticQuantumNumber,Definition,"A quantum number that describes the orientation of an electron's angular momentum in a magnetic field."
+SpinQuantumNumber,Symbol,s
+SpinQuantumNumber,Definition,"Represents the intrinsic angular momentum (spin) of a particle."
+SpinQuantumNumber,AllowedValues,"s = 0, 1/2, 1, 3/2, ... (integer or half-integer values)"
+SpinQuantumNumber,ValueForElectron,1/2
+SpinQuantumNumber,ValueForPhoton,1
+SpinQuantumNumber,ValueForProton,1/2
+SpinQuantumNumber,ValueForNeutron,1/2
+SpinQuantumNumber,Note,"The spin quantum number defines the two possible spin states of an electron: spin-up (+1/2) and spin-down (-1/2)."
+MagneticQuantumNumber,Symbol,m_s
+MagneticQuantumNumber,Definition,"Specifies the projection of the spin quantum number along a chosen axis, typically in a magnetic field."
+MagneticQuantumNumber,AllowedValues,"m_s = -s, -s+1, ..., +s"
+PrincipalQuantumNumber,Symbol,n
+PrincipalQuantumNumber,Definition,"Specifies the energy level or shell of an electron in an atom."
+PrincipalQuantumNumber,AllowedValues,"n = 1, 2, 3, ..."
+PrincipalQuantumNumber,SelectionRule,"Δn = any integer (no restriction)"
+
+OrbitalAngularMomentumQuantumNumber,Symbol,l
+OrbitalAngularMomentumQuantumNumber,Definition,"Defines the shape of the electron's orbital, also known as the azimuthal quantum number."
+OrbitalAngularMomentumQuantumNumber,AllowedValues,"l = 0, 1, ..., n-1"
+OrbitalAngularMomentumQuantumNumber,SelectionRule,"Δl = ±1 (for electric dipole transitions)"
+
+MagneticQuantumNumber,Symbol,m_l
+MagneticQuantumNumber,Definition,"Specifies the orientation of the orbital angular momentum in space."
+MagneticQuantumNumber,AllowedValues,"m_l = -l, -l+1, ..., +l"
+MagneticQuantumNumber,SelectionRule,"Δm_l = 0, ±1 (for electric dipole transitions)"
+
+SpinQuantumNumber,Symbol,s
+SpinQuantumNumber,AllowedValues,"s = 0, 1/2, 1, 3/2, ..."
+SpinQuantumNumber,SelectionRule,"No restriction (fixed for each particle type)"
+
+MagneticSpinQuantumNumber,Symbol,m_s
+MagneticSpinQuantumNumber,Definition,"Specifies the orientation of the spin angular momentum."
+MagneticSpinQuantumNumber,AllowedValues,"m_s = -s, -s+1, ..., +s"
+MagneticSpinQuantumNumber,SelectionRule,"Δm_s = 0, ±1 (for spin interactions in magnetic fields)"
+
+TotalAngularMomentumQuantumNumber,Symbol,j
+TotalAngularMomentumQuantumNumber,Definition,"The total angular momentum quantum number, combining orbital and spin angular momentum."
+TotalAngularMomentumQuantumNumber,AllowedValues,"j = |l - s|, |l - s| + 1, ..., l + s"
+TotalAngularMomentumQuantumNumber,SelectionRule,"Δj = 0, ±1 (except j = 0 to j = 0 transitions are forbidden)"
+
+ParityQuantumNumber,Symbol,P
+ParityQuantumNumber,Definition,"Indicates the symmetry of the wavefunction under spatial inversion (reflection)."
+ParityQuantumNumber,AllowedValues,"P = +1 (even parity), -1 (odd parity)"
+ParityQuantumNumber,SelectionRule,"ΔP = -1 for electric dipole transitions (parity must change)"
+
+IsospinQuantumNumber,Symbol,I
+IsospinQuantumNumber,Definition,"A quantum number related to the strong nuclear force, analogous to spin but applied to nucleons."
+IsospinQuantumNumber,AllowedValues,"I = integer or half-integer values (e.g., 0, 1/2, 1)"
+IsospinQuantumNumber,SelectionRule,"ΔI = 0 or ±1 (conservation in strong interactions)"
+
+HyperfineQuantumNumber,Symbol,F
+HyperfineQuantumNumber,Definition,"The quantum number describing the total angular momentum of the atom, including nuclear spin."
+HyperfineQuantumNumber,AllowedValues,"F = |I - J|, |I - J| + 1, ..., I + J"
+HyperfineQuantumNumber,SelectionRule,"ΔF = 0, ±1 (for magnetic dipole transitions)"
+
+PrincipalQuantumNumber,Symbol,n
+PrincipalQuantumNumber,Definition,"Determines the size and energy of the electron’s orbit (or shell)."
+PrincipalQuantumNumber,AllowedValues,"n = 1, 2, 3, ..."
+PrincipalQuantumNumber,SelectionRule,"Δn = any integer (not restricted by selection rules)"
+
+AzimuthalQuantumNumber,Symbol,l
+AzimuthalQuantumNumber,Definition,"Defines the shape of the orbital and is also referred to as the orbital angular momentum quantum number."
+AzimuthalQuantumNumber,AllowedValues,"l = 0, 1, 2, ..., n - 1"
+AzimuthalQuantumNumber,SelectionRule,"Δl = ±1 for allowed transitions in electric dipole transitions"
+
+MagneticQuantumNumber,Symbol,m_l
+MagneticQuantumNumber,Definition,"Defines the orientation of the orbital in space."
+MagneticQuantumNumber,AllowedValues,"m_l = -l, ..., +l"
+MagneticQuantumNumber,SelectionRule,"Δm_l = 0, ±1 for allowed transitions in electric dipole transitions"
