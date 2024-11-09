@@ -1,0 +1,71 @@
+@prefix ex: <http://example.org/atomic#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+ex:Rubidium a ex:Element ;
+    ex:atomicNumber 37 ;
+    ex:hasIsotope ex:Rb_85,
+        ex:Rb_87 ;
+    ex:symbol "Rb" .
+
+<http:__example.org_atomic#D1> a ex:OpticalTransition ;
+    ex:hasUpperState <http:__example.org_atomic#5P1_2> ;
+    ex:linewidth "5.75 MHz" ;
+    ex:lowerState <http:__example.org_atomic#5S1_2> ;
+    ex:wavelength "794.7 nm" .
+
+<http:__example.org_atomic#D2> a ex:OpticalTransition ;
+    ex:hasUpperState <http:__example.org_atomic#5P3_2> ;
+    ex:linewidth "6.07 MHz" ;
+    ex:lowerState <http:__example.org_atomic#5S1_2> ;
+    ex:wavelength "780.0 nm" .
+
+ex:5P1_2_F1 a ex:HyperfineSplitting ;
+    ex:F 1 ;
+    ex:energy "0 MHz" .
+
+ex:5P1_2_F2 a ex:HyperfineSplitting ;
+    ex:F 2 ;
+    ex:energy "814 MHz" .
+
+ex:5P3_2_F0 a ex:HyperfineSplitting ;
+    ex:F 0 ;
+    ex:energy "0 MHz" .
+
+ex:5P3_2_F1 a ex:HyperfineSplitting ;
+    ex:F 1 ;
+    ex:energy "193 MHz" .
+
+ex:5S1_2_F1 a ex:HyperfineSplitting ;
+    ex:F 1 ;
+    ex:energy "0 MHz" .
+
+ex:5S1_2_F2 a ex:HyperfineSplitting ;
+    ex:F 2 ;
+    ex:energy "0 MHz",
+        "6835 MHz" .
+
+ex:5S1_2_F3 a ex:HyperfineSplitting ;
+    ex:F 3 ;
+    ex:energy "3035 MHz" .
+
+ex:Rb_85 a ex:Isotope ;
+    ex:abundance "72.17%" ;
+    ex:nuclearSpin "5/2" .
+
+ex:Rb_87 a ex:Isotope ;
+    ex:abundance "27.83%" ;
+    ex:nuclearSpin "3/2" .
+
+<http:__example.org_atomic#5P1_2> a ex:EnergyLevel ;
+    ex:hasHyperfineSplitting ex:5P1_2_F1,
+        ex:5P1_2_F2 .
+
+<http:__example.org_atomic#5P3_2> a ex:EnergyLevel ;
+    ex:hasHyperfineSplitting ex:5P3_2_F0,
+        ex:5P3_2_F1 .
+
+<http:__example.org_atomic#5S1_2> a ex:EnergyLevel ;
+    ex:hasHyperfineSplitting ex:5S1_2_F1,
+        ex:5S1_2_F2,
+        ex:5S1_2_F3 .
+
