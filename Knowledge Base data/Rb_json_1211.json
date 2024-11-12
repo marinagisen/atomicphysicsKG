@@ -1,0 +1,112 @@
+
+If you want to avoid duplicating the optical transition details under each isotope, here’s how you can structure the JSON with a reference-based approach. We’ll keep the transition details at the top level and use references within each isotope's properties to link to the relevant transitions.
+
+Here’s the updated JSON structure:
+
+json
+Copy code
+{
+  "element": "Rubidium",
+  "symbol": "Rb",
+  "atomic_number": 37,
+  "isotopes": [
+    {
+      "isotope": "Rb-85",
+      "abundance": "72.17%",
+      "nuclear_spin": "5/2",
+      "properties": {
+        "energy_levels": [
+          {
+            "level": "5S1/2",
+            "hyperfine_splitting": [
+              {
+                "F": 2,
+                "energy": "0 MHz"
+              },
+              {
+                "F": 3,
+                "energy": "3035 MHz"
+              }
+            ]
+          },
+          {
+            "level": "5P1/2",
+            "hyperfine_splitting": [
+              {
+                "F": 1,
+                "energy": "0 MHz"
+              },
+              {
+                "F": 2,
+                "energy": "814 MHz"
+              }
+            ]
+          }
+        ],
+        "g_factor": {
+          "electron_g_factor": 2.002331,
+          "nuclear_g_factor": -0.000293
+        },
+        "optical_transitions": ["D1", "D2"]
+      }
+    },
+    {
+      "isotope": "Rb-87",
+      "abundance": "27.83%",
+      "nuclear_spin": "3/2",
+      "properties": {
+        "energy_levels": [
+          {
+            "level": "5S1/2",
+            "hyperfine_splitting": [
+              {
+                "F": 1,
+                "energy": "0 MHz"
+              },
+              {
+                "F": 2,
+                "energy": "6835 MHz"
+              }
+            ]
+          },
+          {
+            "level": "5P3/2",
+            "hyperfine_splitting": [
+              {
+                "F": 0,
+                "energy": "0 MHz"
+              },
+              {
+                "F": 1,
+                "energy": "193 MHz"
+              }
+            ]
+          }
+        ],
+        "g_factor": {
+          "electron_g_factor": 2.002331,
+          "nuclear_g_factor": 0.000995
+        },
+        "optical_transitions": ["D1", "D2"]
+      }
+    }
+  ],
+  "optical_transitions": [
+    {
+      "id": "D1",
+      "transition": "D1",
+      "wavelength": "794.7 nm",
+      "upper_state": "5P1/2",
+      "lower_state": "5S1/2",
+      "linewidth": "5.75 MHz"
+    },
+    {
+      "id": "D2",
+      "transition": "D2",
+      "wavelength": "780.0 nm",
+      "upper_state": "5P3/2",
+      "lower_state": "5S1/2",
+      "linewidth": "6.07 MHz"
+    }
+  ]
+}
