@@ -1,0 +1,98 @@
+digraph RubidiumGraph {
+    // Rubidium 
+    Rb [label="Rubidium (Rb)"];
+    
+    // Properties 
+    Rb_AtomicNumber [label="Atomic Number: 37"];
+    Rb_ElectronConfig [label="Electron Configuration: [Kr] 5s1"];
+    
+    // Edges connecting Rubidium to properties
+    Rb -> Rb_AtomicNumber [label="has property"];
+    Rb -> Rb_ElectronConfig [label="has property"];
+    
+    // Isotopes 
+    Rb85 [label="Rb-85"];
+    Rb87 [label="Rb-87"];
+    
+    // Edges connecting Rubidium to isotopes
+    Rb -> Rb85 [label="has isotope"];
+    Rb -> Rb87 [label="has isotope"];
+    
+    // Properties  Rb85
+    Rb85_MassNumber [label="Mass Number: 85"];
+    Rb85_NaturalAbundance [label="Natural Abundance: 72.17%"];
+    Rb85_NuclearSpin [label="Nuclear Spin I: 5/2"];
+    Rb85_MagneticMoment [label="Magnetic Moment: +1.353 μ_N"];
+    
+    // Edges connecting Rb-85 to properties
+    Rb85 -> Rb85_MassNumber [label="has property"];
+    Rb85 -> Rb85_NaturalAbundance [label="has property"];
+    Rb85 -> Rb85_NuclearSpin [label="has property"];
+    Rb85 -> Rb85_MagneticMoment [label="has property"];
+    
+    // Properties Rb87
+    Rb87_MassNumber [label="Mass Number: 87"];
+    Rb87_NaturalAbundance [label="Natural Abundance: 27.83%"];
+    Rb87_NuclearSpin [label="Nuclear Spin I: 3/2"];
+    Rb87_MagneticMoment [label="Magnetic Moment: +2.751 μ_N"];
+    
+    // Edges connecting Rb-87 to its properties
+    Rb87 -> Rb87_MassNumber [label="has property"];
+    Rb87 -> Rb87_NaturalAbundance [label="has property"];
+    Rb87 -> Rb87_NuclearSpin [label="has property"];
+    Rb87 -> Rb87_MagneticMoment [label="has property"];
+    
+    // Hyperfine structure  Rb-85
+    Rb85_5S [label="Energy Level: 5S1/2"];
+    Rb85_5P [label="Energy Level: 5P1/2"];
+    
+    // Hyperfine levels  Rb-85
+    Rb85_5S_F2 [label="F=2"];
+    Rb85_5S_F3 [label="F=3"];
+    Rb85_5P_F2 [label="F'=2"];
+    Rb85_5P_F3 [label="F'=3"];
+    
+    // Edges connecting Rb-85 to energy levels
+    Rb85 -> Rb85_5S [label="has energy level"];
+    Rb85 -> Rb85_5P [label="has energy level"];
+    
+    // Edges connecting energy levels to hyperfine levels (Rb-85)
+    Rb85_5S -> Rb85_5S_F2 [label="has hyperfine level"];
+    Rb85_5S -> Rb85_5S_F3 [label="has hyperfine level"];
+    Rb85_5P -> Rb85_5P_F2 [label="has hyperfine level"];
+    Rb85_5P -> Rb85_5P_F3 [label="has hyperfine level"];
+    
+    // Hyperfine structure  Rb-87
+    Rb87_5S [label="Energy Level: 5S1/2"];
+    Rb87_5P [label="Energy Level: 5P1/2"];
+    
+    // Hyperfine levels  Rb-87
+    Rb87_5S_F1 [label="F=1"];
+    Rb87_5S_F2 [label="F=2"];
+    Rb87_5P_F1 [label="F'=1"];
+    Rb87_5P_F2 [label="F'=2"];
+    
+    // Edges connecting Rb-87 to energy levels
+    Rb87 -> Rb87_5S [label="has energy level"];
+    Rb87 -> Rb87_5P [label="has energy level"];
+    
+    // Edges connecting energy levels to hyperfine levels (Rb-87)
+    Rb87_5S -> Rb87_5S_F1 [label="has hyperfine level"];
+    Rb87_5S -> Rb87_5S_F2 [label="has hyperfine level"];
+    Rb87_5P -> Rb87_5P_F1 [label="has hyperfine level"];
+    Rb87_5P -> Rb87_5P_F2 [label="has hyperfine level"];
+    
+    // Transitions between hyperfine levels (Rb-85) allowed if (F -> F' = +- 1 or 0)
+    Rb85_5S_F2 -> Rb85_5P_F2 [label="transition"]; // F2 -> F'2
+    Rb85_5S_F2 -> Rb85_5P_F3 [label="transition"]; // F2 -> F'3
+    Rb85_5S_F3 -> Rb85_5P_F2 [label="transition"]; // F3 -> F'2
+    Rb85_5S_F3 -> Rb85_5P_F3 [label="transition"]; // F3 -> F'3
+    
+    // Transitions between hyperfine levels (Rb-87)  allowed if (F -> F' = +-1 or 0)
+    Rb87_5S_F1 -> Rb87_5P_F0 [label="transition"]; // F1 -> F'0
+    Rb87_5S_F1 -> Rb87_5P_F1 [label="transition"]; // F1 -> F'1
+    Rb87_5S_F1 -> Rb87_5P_F2 [label="transition"]; // F1 -> F'2
+    Rb87_5S_F2 -> Rb87_5P_F1 [label="transition"]; // F2 -> F'1
+    Rb87_5S_F2 -> Rb87_5P_F2 [label="transition"]; // F2 -> F'2
+    Rb87_5S_F2 -> Rb87_5P_F3 [label="transition"]; // F2 -> F'3
+}
